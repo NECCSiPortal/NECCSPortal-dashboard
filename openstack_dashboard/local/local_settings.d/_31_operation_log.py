@@ -36,16 +36,9 @@ LOGGING = {
             'filename': '/var/log/horizon/horizon.log',
             'formatter': 'verbose',
         },
-        'syslog': {
-            'level': 'INFO',
-            'facility': 'local1',
-            'class': 'logging.handlers.SysLogHandler',
-            'address': '/dev/log',
-            'formatter': 'normal',
-        }
     },
     'loggers': {
-        'horizon.operation_log_middleware.OperationLogMiddleware': {
+        'horizon.operation_log': {
             'handlers': ['operation'],
             'level': 'INFO',
             'propagate': False,
@@ -166,16 +159,19 @@ LOGGING = {
     }
 }
 
-# A value for OperationMiddleware
-# OPENSTACK_HORIZON_OPERATION_ENABLED is flag to use OperationMiddleware
-# OPENSTACK_HORIZON_OPERATION_MASK_TARGETS is arrangement for appointing
-# a target to mask.
-# OPENSTACK_HORIZON_OPERATION_METHOD_TARGETS is arrangement of HTTP method
-# to output log.
-OPENSTACK_HORIZON_OPERATION_ENABLED = True
-OPENSTACK_HORIZON_OPERATION_MASK_TARGETS = ['password', 'confirm_admin_pass']
-OPENSTACK_HORIZON_OPERATION_METHOD_TARGETS = ['POST', 'GET']
+# Settings for OperationLogMiddleware
+# OPERATION_LOG_ENABLED is flag to use the function to log an operation on
+# Horizon.
+# mask_targets is arrangement for appointing a target to mask.
+# method_targets is arrangement of HTTP method to output log.
+# format is the log contents.
+class mydict(dict):
+    __getattr__ = dict.__getitem__
 
-MIDDLEWARE_CLASSES += (
-    'horizon.operation_log_middleware.OperationLogMiddleware',
-)
+OPERATION_LOG_ENABLED = True
+OPERATION_LOG_OPTIONS = mydict()
+OPERATION_LOG_OPTIONS['mask_fields'] = ['password', 'confirm_admin_pass']
+OPERATION_LOG_OPTIONS['target_methods'] = ['GET', 'POST']
+OPERATION_LOG_OPTIONS['format'] = ("%(project_name)s,%(project_id)s %(user_name)s,%(user_id)s"
+    " %(referer_url)s %(request_url)s %(message)s %(method)s"
+    " %(http_status)s %(param)s")

@@ -11,17 +11,9 @@
 #  under the License.
 #
 
-from django.conf import settings
+from django.conf import urls
+import openstack_dashboard.urls
 
-
-class FixedRegionMiddleware(object):
-    """Fixed region from setting middleware"""
-    fixed_region_name = getattr(settings, 'FIXED_REGION_NAME', '')
-    openstack_keystone_url = getattr(settings, 'OPENSTACK_KEYSTONE_URL', '')
-
-    def process_response(self, request, response):
-        if self.fixed_region_name and hasattr(request, 'session'):
-            request.session['services_region'] = self.fixed_region_name
-            request.session['region_endpoint'] = self.openstack_keystone_url
-
-        return response
+urlpatterns = [
+    urls.url(r'', urls.include(openstack_dashboard.urls))
+]

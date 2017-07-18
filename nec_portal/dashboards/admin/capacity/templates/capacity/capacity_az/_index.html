@@ -22,18 +22,3 @@ $(document).ready(function(){
   });
 });
 </script>
-
-<div class="row-fluid">
-  <div class="form-inline">
-    <h4 class="form-inline">{% trans "Availability zones: " %}</h4>
-    <select name="az" class="form-control" onChange="location.href=this.options[this.selectedIndex].value" style="width: auto;">
-      {% for az in az_list %}
-        <option value="?group=az&name={{ az }}" {% if name and name == az %}selected{% endif %}>{{ az }}</option>
-      {% endfor %}
-    </select>
-  </div>
-  <div class="clearfix"><br /></div>
-  <div class="col-sm-12">
-    <iframe src="{{ detail_url }}" height="1000" width="100%" ></iframe>
-  </div>
-</div>

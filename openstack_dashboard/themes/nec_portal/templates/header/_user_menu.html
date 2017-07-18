@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load themes %}
 
+
 {% if not_list %}
   <div class="dropdown user-menu">
 {% else %}
@@ -34,10 +35,11 @@
         </li>
       {% endif %}
       <li class="divider"></li>
-      <li>
-        <a href="{% url 'logout' %}" target="_self">
+      <li id="sign_out_link">
+        <a href="#" target="_self">
           <span class="fa fa-sign-out"></span>
           {% trans "Sign Out" %}
+          <iframe name="logout_other_system" id="logout_other_system" style="height:1px; width:1px;"></iframe>
         </a>
       </li>
     </ul>
@@ -47,3 +49,9 @@
   </li>
 {% endif %}
 
+<script type="text/javascript">
+$("#sign_out_link").click(function() {
+  $("#logout_other_system").attr("src", "{{ HORIZON_CONFIG.other_system_logout_url|safe }}")
+  window.location.href = "{% url 'logout' %}";
+});
+</script>

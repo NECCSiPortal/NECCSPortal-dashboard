@@ -20,6 +20,7 @@ Views for managing operation logs.
 from django.http import Http404
 from django.http import HttpResponseForbidden
 from django.shortcuts import redirect
+from django.utils.translation import ugettext_lazy as _
 
 from horizon import tables
 
@@ -35,6 +36,7 @@ ADMIN_LOG_MANAGEMENT_FRAME = \
 class IndexView(tables.DataTableView):
     table_class = log_management_tables.LogManagementTable
     template_name = 'admin/log_management/index.html'
+    page_title = _('Infrastructure Log')
 
     def get_data(self):
         return None

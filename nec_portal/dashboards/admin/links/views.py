@@ -15,6 +15,8 @@
 Views for Links.
 """
 
+from django.utils.translation import ugettext_lazy as _
+
 from horizon import tables
 
 from nec_portal.dashboards.admin.links import tables as links_tables
@@ -25,6 +27,7 @@ from openstack_auth import utils as auth_utils
 class IndexView(tables.DataTableView):
     table_class = links_tables.LinksTable
     template_name = 'admin/links/index.html'
+    page_title = _('Links')
 
     def get_data(self):
         return None

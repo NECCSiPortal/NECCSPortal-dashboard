@@ -226,7 +226,7 @@ input[type="radio"] {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.table_actions a {
+.table_actions > a {
     border: 1px solid $border-color-btn;
     background: url("#{$img_path}bg_btn_normal.png") repeat-x scroll left center $bg-color-btn;
     color: $font-color-btn;
