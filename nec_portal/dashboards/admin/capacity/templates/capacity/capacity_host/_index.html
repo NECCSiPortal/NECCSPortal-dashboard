@@ -1,0 +1,24 @@
+{% load i18n sizeformat parse_date %}
+{% load url from future %}
+<div class="row-fluid">
+  <div class="form-inline">
+    <h4 class="form-inline">{% trans "Host: " %}</h4>
+    <select name="host" class="form-control" onChange="location.href=this.options[this.selectedIndex].value" style="width: auto;">
+      {% for host in host_list %}
+        <option value="?group=host&name={{ host }}" {% if name and name == host %}selected{% endif %}>{{ host }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var id = 'capacity_host';
+  var tab_name = 'capacity_group_tabs__capacity_host';
+
+  setLoader(id, "{{ detail_url }}");
+  $('a[href$=' + tab_name + ']').parent().click(function() {
+    showCapacity(id);
+  });
+});
+</script>

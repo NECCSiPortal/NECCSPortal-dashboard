@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Operation Log" %}{% endblock %}
+
+{% block main %}
+    <script type="text/javascript">
+        $(function(){
+            // Add classes by input's id.
+            $('#id_search').parent('div').parent('div').addClass('col-sm-11');
+            $('#id_start').parent('div').parent('div').addClass('retrieval_wrapper');
+            $('#id_end').parent('div').parent('div').addClass('retrieval_wrapper');
+
+            // Start and end are grouped.
+            // And the group setup.
+            $('div.retrieval_wrapper').wrapAll('<div id="retrieval_wrapper"></div>');
+            $('#retrieval_wrapper').wrapAll('<div class="col-sm-11"></div>');
+            $('#retrieval_wrapper').addClass('form-inline');
+            $('#retrieval_wrapper').children('div').remove();
+
+            // Replace datefield and delete unnecessary class.
+            $('#retrieval_wrapper').append('<label class="control-label" for="id_search">{% trans 'Search Period' %}</label><br />');
+            $('#retrieval_wrapper').append('<div id="start_date" class="datepicker form-group"></div><div id="end_date" class="datepicker form-group"></div>');
+            $('#start_delete').children().clone().appendTo('#start_date');
+            $('#end_delete').children().clone().appendTo('#end_date');
+            $('#start_delete').remove();
+            $('#end_delete').remove();
+
+            // Get submit button.
+            $('.modal-footer').children('input[type="submit"]').clone().appendTo('#retrieval_wrapper');
+            $('#retrieval_wrapper').children('input[type="submit"]').addClass('pull-right');
+
+            // Delete unnecessary class.
+            $('.modal-header').remove();
+            $('.modal-footer').remove();
+            $('div.modal-body').children('div').children('div.col-sm-6')[0].className = '';
+            $('div.modal-body').children('div').children('div.col-sm-6').remove();
+            $('div.modal-body').children('div').children('div').children('fieldset').css({overflow: "visible", height: "100%"});
+        });
+    </script>
+    {% include "admin/history/_field_right.html" %}
+    {% include "admin/history/_index.html" %}
+    <div id="start_delete">
+        {% blocktrans with start=form.start %}<label>From:</label> {{ start }}{% endblocktrans %}
+    </div>
+    <div id="end_delete">
+        {% blocktrans with end=form.end %}<label>To:</label>{{ end }}{% endblocktrans %}
+    </div>
+{% endblock %}

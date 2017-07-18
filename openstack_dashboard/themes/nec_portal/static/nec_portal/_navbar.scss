@@ -1,0 +1,75 @@
+// NEC Cloud System Style
+// ----
+
+.navbar {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background: url(#{$img_path}bg_header.png) no-repeat scroll left top / cover    $bg-color-topbar;
+
+  // Specificity Required
+  .navbar-toggle {
+    border-color: transparent;
+  }
+
+  // Pushes the menu slightly down from the navbar
+  li > .dropdown-menu {
+    margin-top: 2px;
+
+    @media (max-width: $screen-sm) {
+      &:after,
+      &:before {
+        border: none;
+      }
+    }
+  }
+}
+
+// Specificity required
+.topbar {
+  .navbar {
+    margin-bottom: 1px;
+  }
+}
+
+.navbar-default {
+  .navbar-brand {
+    margin-top: 5px;
+    padding-right: initial;
+  }
+
+  .navbar-nav {
+    float: left;
+    position: relative;
+    padding-left: 30px;
+    margin: 4.5px -15px;
+
+    > li > a {
+      //color: $navbar-default-link-color;
+      color: $font-color-topbar-btn;
+      background: url("#{$img_path}bg_btn_normal.png") repeat-x scroll left center $bg-color-btn;
+
+      &:hover,
+      &:focus {
+        //color: $navbar-default-link-hover-color;
+        color: $font-color-topbar-btn;
+        //background-color: $navbar-default-link-hover-bg;
+        background: url("#{$img_path}bg_btn_nor_hover.png") repeat-x scroll left center $bg-color-btn-hover;
+      }
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 18px;
+      border-radius: 5px;
+    }
+
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        //color: $navbar-default-link-active-color;
+        color: $font-color-topbar-btn;
+      }
+    }
+  }
+}

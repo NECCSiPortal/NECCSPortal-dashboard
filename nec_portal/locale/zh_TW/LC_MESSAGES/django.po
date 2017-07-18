@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-28 09:12+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/404.html:7
+msgid "Page Not Found"
+msgstr ""
+
+#: templates/404.html:19
+msgid "The page you were looking for doesn't exist"
+msgstr ""
+
+#: templates/404.html:20
+msgid "You may have mistyped the address or the page may have moved."
+msgstr ""
+
+#: templates/500.html:20
+msgid "Server error"
+msgstr ""
+
+#: templates/500.html:67
+msgid "Something went wrong!"
+msgstr ""
+
+#: templates/500.html:68
+msgid ""
+"An unexpected error has occurred. Try refreshing the page. If that doesn't "
+"help, contact your local administrator."
+msgstr ""
+
+#: templates/500.html:73
+msgid "Home"
+msgstr ""
+
+#: templates/500.html:74 templates/_header.html:45
+msgid "Help"
+msgstr ""
+
+#: templates/_header.html:20
+msgid "More Projects"
+msgstr ""
+
+#: templates/_header.html:38
+msgid "Settings"
+msgstr ""
+
+#: templates/_header.html:53
+msgid "Sign Out"
+msgstr ""
+
+#: dashboards/admin/history/forms.py:23 dashboards/project/history/forms.py:23
+msgid "Keyword"
+msgstr ""
+
+#: dashboards/admin/history/forms.py:26
+msgid ""
+"A regular expression is available to you. For example, you can extract a "
+"beginning with demo from Project name when you search it as 'tenant_name: "
+"demo*'. It's searched by all columns if you don't appoint a column. When you "
+"set 'AND', it's conformed to both conditions. When you set 'OR', it's "
+"conformed to either condition. When you set 'NOT', A following condition "
+"will be excluded. For example, you set 'tenant_name: demo AND POST' when you "
+"extract a POST in demo Project."
+msgstr ""
+
+#: dashboards/admin/history/forms.py:39 dashboards/project/history/forms.py:39
+msgid "From:"
+msgstr ""
+
+#: dashboards/admin/history/forms.py:41 dashboards/project/history/forms.py:41
+msgid "To:"
+msgstr ""
+
+#: dashboards/admin/history/forms.py:55 dashboards/project/history/forms.py:55
+msgid ""
+"Invalid time period. The end date should be more recent than the start date."
+msgstr ""
+
+#: dashboards/admin/history/panel.py:23
+#: dashboards/admin/history/templates/history/index.html:3
+#: dashboards/admin/history/views.py:64 dashboards/admin/history/views.py:132
+#: dashboards/project/history/panel.py:23
+#: dashboards/project/history/templates/history/index.html:3
+#: dashboards/project/history/views.py:64
+#: dashboards/project/history/views.py:133
+msgid "History"
+msgstr ""
+
+#: dashboards/admin/history/templates/history/index.html:30
+#: dashboards/project/history/templates/history/index.html:30
+msgid "Retrieval Period"
+msgstr ""
+
+#: dashboards/admin/history/templates/history/index.html:73
+#: dashboards/project/history/templates/history/index.html:73
+#, python-format
+msgid "<label>From:</label> %(start)s"
+msgstr ""
+
+#: dashboards/admin/history/templates/history/index.html:76
+#: dashboards/project/history/templates/history/index.html:76
+#, python-format
+msgid "<label>To:</label>%(end)s"
+msgstr ""
+
+#: dashboards/admin/history/views.py:65 dashboards/admin/history/views.py:133
+#: dashboards/project/history/views.py:65
+#: dashboards/project/history/views.py:134
+msgid "Filter"
+msgstr ""
+
+#: dashboards/admin/log_management/panel.py:23
+#: dashboards/admin/log_management/templates/log_management/index.html:3
+#: dashboards/admin/log_management/templates/log_management/index.html:6
+msgid "Log Management"
+msgstr ""
+
+#: dashboards/project/history/forms.py:26
+msgid ""
+"A regular expression is available to you. For example, you can extract a "
+"beginning with demo from User name when you search it as 'user_name: demo*'. "
+"It's searched by all columns if you don't appoint a column. When you set "
+"'AND', it's conformed to both conditions. When you set 'OR', it's conformed "
+"to either condition. When you set 'NOT', A following condition will be "
+"excluded. For example, you set 'user_name: demo AND POST' when you extract a "
+"POST by demo userPOST of Instances."
+msgstr ""
+
+#: dashboards/admin/capacity/panel.py:23
+#: dashboards/admin/capacity/templates/capacity/index.html:3
+#: dashboards/admin/capacity/views.py:41
+msgid "Resources"
+msgstr ""
+
+#: dashboards/admin/capacity/resources.py:35
+msgid "Unable to retrieve availabity zones."
+msgstr ""
+
+#: dashboards/admin/capacity/resources.py:54
+msgid "Unable to retrieve hosts."
+msgstr ""
+
+#: dashboards/admin/capacity/tabs.py:25
+#: dashboards/admin/capacity/templates/capacity/capacity/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity/index.html:7
+msgid "Whole of system"
+msgstr ""
+
+#: dashboards/admin/capacity/tabs.py:44
+#: dashboards/admin/capacity/templates/capacity/capacity_az/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity_az/index.html:7
+msgid "Availability Zones"
+msgstr ""
+
+#: dashboards/admin/capacity/tabs.py:62
+#: dashboards/admin/capacity/templates/capacity/capacity_host/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity_host/index.html:7
+msgid "Host"
+msgstr ""
+
+#: dashboards/admin/capacity/templates/capacity/capacity_az/_index.html:5
+msgid "Availability Zones: "
+msgstr ""
+
+#: dashboards/admin/capacity/templates/capacity/capacity_host/_index.html:5
+msgid "Host: "
+msgstr ""
+
+#: local/nec_portal_settings.py:6
+msgid "Capacity"
+msgstr ""
+
+#: local/nec_portal_settings.py:4
+msgid "Other"
+msgstr ""
+
+#: dashboards/admin/links/panel.py:21
+#: dashboards/admin/links/templates/links/index.html:3
+#: dashboards/admin/links/templates/links/index.html:6
+#: dashboards/project/links/panel.py:21
+#: dashboards/project/links/templates/links/index.html:3
+#: dashboards/project/links/templates/links/index.html:6
+msgid "Links"
+msgstr ""
+
+#: dashboards/admin/links/templates/links/_index.html:9
+#: dashboards/project/links/templates/links/_index.html:9
+msgid "Name"
+msgstr ""
+
+#: dashboards/admin/links/templates/links/_index.html:10
+#: dashboards/project/links/templates/links/_index.html:10
+msgid "Description"
+msgstr ""
+
+#: dashboards/admin/links/templates/links/_index.html:11
+#: dashboards/project/links/templates/links/_index.html:11
+msgid "Actions"
+msgstr ""
+
+#: dashboards/admin/links/templates/links/_index.html:22
+#: dashboards/project/links/templates/links/_index.html:22
+msgid "Show"
+msgstr ""
+
+#: dashboards/admin/links/templates/links/_index.html:29
+#: dashboards/project/links/templates/links/_index.html:29
+msgid "No items to display."
+msgstr ""
+
+#: local/nec_portal_settings.py:13
+msgid "repository"
+msgstr ""
+
+#: local/nec_portal_settings.py:14
+msgid "Do centralized management of resource files."
+msgstr ""

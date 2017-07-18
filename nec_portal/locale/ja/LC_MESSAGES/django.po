@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-16 04:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dashboards/admin/capacity/panel.py:23
+#: dashboards/admin/capacity/templates/capacity/index.html:3
+#: dashboards/admin/capacity/views.py:41
+msgid "Resources"
+msgstr "リソース"
+
+#: dashboards/admin/capacity/resources.py:35
+msgid "Unable to retrieve availability zones."
+msgstr "アベイラビリティゾーンのリストを取得できません"
+
+#: dashboards/admin/capacity/resources.py:54
+msgid "Unable to retrieve hosts."
+msgstr "ホストのリストを取得できません"
+
+#: dashboards/admin/capacity/tabs.py:25
+#: dashboards/admin/capacity/templates/capacity/capacity/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity/index.html:7
+msgid "Whole system"
+msgstr "システム全体"
+
+#: dashboards/admin/capacity/tabs.py:44
+#: dashboards/admin/capacity/templates/capacity/capacity_az/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity_az/index.html:7
+msgid "Availability zones"
+msgstr "アベイラビリティゾーン"
+
+#: dashboards/admin/capacity/tabs.py:62
+#: dashboards/admin/capacity/templates/capacity/capacity_host/index.html:4
+#: dashboards/admin/capacity/templates/capacity/capacity_host/index.html:7
+msgid "Host"
+msgstr "ホスト"
+
+#: dashboards/admin/capacity/templates/capacity/capacity_az/_index.html:5
+msgid "Availability zones: "
+msgstr "アベイラビリティゾーン: "
+
+#: dashboards/admin/capacity/templates/capacity/capacity_host/_index.html:5
+msgid "Host: "
+msgstr "ホスト: "
+
+#: dashboards/admin/history/forms.py:24 dashboards/project/history/forms.py:23
+msgid "Keyword"
+msgstr "キーワード"
+
+#: dashboards/admin/history/forms.py:28
+msgid ""
+"[1]Regular expression is available.(Ex.)&quot;project_name:demo*&quot; "
+"returns all the logs of projects whose name beginning with &quot;demo&quot;. "
+"[2]All columns are searched when no columns are selected. [3]AND/OR/NOT "
+"search operators are supported.(Ex.)&quot;project_name:demo AND POST&quot; "
+"returns POST logs of project &quot;demo&quot;."
+msgstr ""
+"正規表現が利用できる。例）'project_name: demo*'と入力することで、demoから始ま"
+"るプロジェクト名が抽出される。カラムを指定しなければ、全カラムを検索する。AND"
+"でつなげばAND検索、ORでつなげばOR検索、NOTを置くと除外条件を設定できる。"
+"例）'project_name: demo AND POST'と入力することで、デモプロジェクトのPOST情報"
+"が抽出される。"
+
+#: dashboards/admin/history/forms.py:38 dashboards/project/history/forms.py:37
+msgid "From:"
+msgstr "開始:"
+
+#: dashboards/admin/history/forms.py:40 dashboards/project/history/forms.py:39
+msgid "To:"
+msgstr "終了:"
+
+#: dashboards/admin/history/forms.py:54 dashboards/project/history/forms.py:53
+msgid ""
+"Invalid time period. The end date should be more recent than the start date."
+msgstr "指定された期間が不正です。終了日は開始日より後でなければなりません。"
+
+#: dashboards/admin/history/panel.py:23
+#: dashboards/admin/history/templates/history/index.html:3
+#: dashboards/admin/history/views.py:69 dashboards/admin/history/views.py:138
+#: dashboards/project/history/panel.py:23
+#: dashboards/project/history/templates/history/index.html:3
+#: dashboards/project/history/views.py:69
+#: dashboards/project/history/views.py:138
+msgid "Operation Log"
+msgstr "操作ログ"
+
+#: dashboards/admin/history/templates/history/index.html:21
+#: dashboards/project/history/templates/history/index.html:21
+msgid "Search Period"
+msgstr "検索期間"
+
+#: dashboards/admin/history/templates/history/index.html:43
+#: dashboards/project/history/templates/history/index.html:43
+#, python-format
+msgid "<label>From:</label> %(start)s"
+msgstr "%(start)s <label>から</label>"
+
+#: dashboards/admin/history/templates/history/index.html:46
+#: dashboards/project/history/templates/history/index.html:46
+#, python-format
+msgid "<label>To:</label>%(end)s"
+msgstr "%(end)s <label>まで</label>"
+
+#: dashboards/admin/history/views.py:70 dashboards/admin/history/views.py:139
+#: dashboards/project/history/views.py:70
+#: dashboards/project/history/views.py:139
+msgid "Filter"
+msgstr "フィルター"
+
+#: dashboards/admin/links/panel.py:21
+#: dashboards/admin/links/templates/links/index.html:3
+#: dashboards/admin/links/templates/links/index.html:6
+#: dashboards/project/links/panel.py:21
+#: dashboards/project/links/templates/links/index.html:3
+#: dashboards/project/links/templates/links/index.html:6
+msgid "Links"
+msgstr "リンク"
+
+#: dashboards/admin/links/templates/links/_index.html:9
+#: dashboards/project/links/templates/links/_index.html:9
+msgid "Name"
+msgstr "名前"
+
+#: dashboards/admin/links/templates/links/_index.html:10
+#: dashboards/project/links/templates/links/_index.html:10
+msgid "Description"
+msgstr "説明"
+
+#: dashboards/admin/links/templates/links/_index.html:11
+#: dashboards/project/links/templates/links/_index.html:11
+msgid "Actions"
+msgstr "アクション"
+
+#: dashboards/admin/links/templates/links/_index.html:22
+#: dashboards/project/links/templates/links/_index.html:22
+msgid "Show"
+msgstr "表示"
+
+#: dashboards/admin/links/templates/links/_index.html:29
+#: dashboards/project/links/templates/links/_index.html:29
+msgid "No items to display."
+msgstr "表示する項目がありません"
+
+#: dashboards/admin/log_management/panel.py:23
+#: dashboards/admin/log_management/templates/log_management/index.html:3
+#: dashboards/admin/log_management/templates/log_management/index.html:6
+msgid "Infrastructure Log"
+msgstr "インフラログ"
+
+#: dashboards/project/history/forms.py:27
+msgid ""
+"[1]Regular expression is available.(Ex.)&quot;user_name:demo*&quot; returns "
+"all the logs of users whose name beginning with &quot;demo&quot;. [2]All "
+"columns are searched when no columns are selected. [3]AND/OR/NOT search "
+"operators are supported.(Ex.)&quot;user_name:demo AND POST&quot; returns "
+"POST logs of user &quot;demo&quot;."
+msgstr ""
+"正規表現が利用できる。例）'user_name: demo*'と入力することで、demoから始まる"
+"ユーザ名が抽出される。カラムを指定しなければ、全カラムを検索する。ANDでつなげ"
+"ばAND検索、ORでつなげばOR検索、NOTを置くと除外条件を設定できる。"
+"例）'user_name: demo AND POST'と入力することで、デモユーザのPOST情報が抽出さ"
+"れる。"
+
+#: local/nec_portal_settings.py:6
+msgid "Log Management"
+msgstr "ログ管理"
+
+#: local/nec_portal_settings.py:7
+msgid "Link"
+msgstr "リンク"
+
+#: local/nec_portal_settings.py:55
+msgid "Capacity"
+msgstr "キャパシティ"
+
+#: local/nec_portal_settings.py:94
+msgid "repository"
+msgstr "設定管理"
+
+#: local/nec_portal_settings.py:95
+msgid "Do centralized management of resource files."
+msgstr "リソースの一元管理を行う。"
+
+#: templates/404.html:7
+msgid "Page Not Found"
+msgstr "ページが見つかりませんでした"
+
+#: templates/404.html:19
+msgid "The page you were looking for doesn't exist"
+msgstr "お探しのページが見つかりません"
+
+#: templates/404.html:20
+msgid "You may have mistyped the address or the page may have moved."
+msgstr ""
+"入力したアドレスが間違っているか、そのページが移動された可能性があります。"
+
+#: templates/500.html:20
+msgid "Server error"
+msgstr "内部サーバーエラー"
+
+#: templates/500.html:67
+msgid "Something went wrong!"
+msgstr "どこかがおかしくなりました！"
+
+#: templates/500.html:68
+msgid ""
+"An unexpected error has occurred. Try refreshing the page. If that doesn't "
+"help, contact your local administrator."
+msgstr ""
+"予期しないエラーが発生しました。ページの再読み込みを試してください。解決しな"
+"ければ、管理者に連絡してください。"
+
+#: templates/500.html:73
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/500.html:74 templates/_header.html:45
+msgid "Help"
+msgstr "ヘルプ"
+
+#: templates/_header.html:20
+msgid "More Projects"
+msgstr "他のプロジェクト"
+
+#: templates/_header.html:38
+msgid "Settings"
+msgstr "設定"
+
+#: templates/_header.html:53
+msgid "Sign Out"
+msgstr "ログアウト"

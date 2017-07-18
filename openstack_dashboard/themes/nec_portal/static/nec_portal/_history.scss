@@ -1,0 +1,18 @@
+form#history_modal fieldset,
+form#history_modal div#start_delete,
+form#history_modal div#end_delete {
+    height: 0px;
+    overflow: scroll;
+}
+div#history_modal .modal-header,
+form#history_modal .modal-footer {
+    height: 0px;
+    overflow: hidden;
+    border: none;
+}
+form#history_modal .modal-footer input[type="submit"] {
+    display: none;
+}
+form#history_modal {
+    width: 100%;
+}

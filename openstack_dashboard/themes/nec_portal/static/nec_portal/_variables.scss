@@ -1,0 +1,102 @@
+// NEC Cloud System Style
+// ----
+
+//-- Common
+$img_path: $static_url + "themes/nec_portal/img/";
+
+$bg-color-h1:                               inherit !default;
+$bg-color-h2:                               inherit !default;
+$bg-color-h3:                               inherit !default;
+$bg-color-h4:                               inherit !default;
+$bg-color-h5:                               inherit !default;
+$bg-color-h6:                               inherit !default;
+
+$font-size-base:                            13px !default;
+$font-size-large:                           ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:                           ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:                              floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:                              floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:                              ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:                              ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:                              $font-size-base !default;
+$font-size-h6:                              ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-color-h1:                             #6689c3;
+$font-color-h2:                             #6689c3;
+$font-color-h3:                             inherit;
+$font-color-h4:                             inherit;
+$font-color-h5:                             inherit;
+$font-color-h6:                             inherit;
+
+$link-hover-color:                          #37aedd !default;
+$navbar-default-color:                      #ffffff !default;
+$navbar-default-link-color:                 $navbar-default-color !default;
+$navbar-default-link-hover-color:           $navbar-default-color !default;
+
+$font-weight-head:                          bold;
+$font-weight-link:                          bold;
+
+$border-style-img:                          none;
+$border-radius-input:                       3px;
+
+$box-shadow-h2:                             #a7a7a7;
+
+//-- Login
+$font-size-modal-title:                     12pt;
+$font-color-modal-title:                    #333333;
+$font-weight-modal-title:                   bold;
+$border-color-password:                     #999999;
+$border-color-splash:                       #e1e1e1;
+$bg-color-splash:                           #ffffff;
+
+//-- Header
+$bg-color-topbar:                           #6689c3;
+$font-color-topbar-btn:                     #ffffff;
+
+//-- Body
+$border-color-content:                      #cacaca;
+$bg-color-content:                          #ffffff;
+
+//-- Menu
+$border-color-select-hover:                 #6689c3;
+
+//-- Table
+$table-bg:                                  #ffffff !default;
+$table-border-color-top:                    #6689c3;
+$table-border-color-thtd:                   #aaaaaa;
+$table-text-color-thtd:                     #3c557e;
+
+//-- Button
+//-- common
+$font-color-btn:                            #ffffff;
+$font-weight-btn:                           bold;
+$border-color-btn:                          #a0a0a0;
+$border-color-btn-topnav:                   #6689c3;
+$border-color-btn-topnav-hover:             #ffffff;
+$bg-color-btn:                              #6689c3;
+$bg-color-btn-hover:                        #adb4bf;
+$shadow-color-btn:                          #aaaabb;
+$shadow-color-btn-inset:                    #ffffff;
+$border-radius-btn:                         3px;
+
+//-- disabled button
+$font-color-btn-disabled:                   #aaaaaa;
+$border-color-btn-disabled:                 #cccccc;
+$bg-color-btn-disabled:                     #f0f0f0;
+
+//-- modal button
+$font-color-btn-modal:                      #3b5998;
+$font-color-btn-else:                       #505050;
+$font-weight-btn-modal:                     normal;
+$bg-color-btn-modal:                        #f8f8f8;
+
+//-- danger button
+$font-color-btn-danger:                     #ffffff;
+$border-color-btn-danger:                   #bd362f;
+$bg-color-btn-danger:                       #da4e49;
+$bg-color-btn-danger-img-light:             #ee5f5b;
+$bg-color-btn-danger-img-dark:              #bd362f;
+
+//-- cancel button
+$font-color-btn-cancel:                     #3b5998;

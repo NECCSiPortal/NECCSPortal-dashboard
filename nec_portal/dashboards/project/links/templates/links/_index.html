@@ -1,0 +1,40 @@
+{% load i18n sizeformat parse_date %}
+{% load url from future %}
+
+  <table id="links" class="table table-striped datatable">
+    <thead>
+        <tr class="table_column_header">
+        </tr>
+        <tr>
+          <th class="sortable normal_column">{% trans "Name" %}</th>
+          <th class="sortable normal_column">{% trans "Description" %}</th>
+          <th class="actions_column">{% trans "Actions" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% if link_list|length > 0 %}
+        {% for value in link_list %}
+          <tr>
+            <td class="sortable normal_column">{{ value.name }}</td>
+            <td class="sortable normal_column">{{ value.description }}</td>
+            <td class="actions_column">
+              {% if value.url %}
+                <a class="btn btn-default btn-sm" href="{{ value.url }}" target="_blank">{% trans "Show" %}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr class="empty">
+          <td colspan="3">{% trans "No items to display." %}</td>
+        </tr>
+      {% endif %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <span class="table_count" />
+        </td>
+      </tr>
+    </tfoot>
+  </table>

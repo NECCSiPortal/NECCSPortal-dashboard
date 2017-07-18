@@ -1,0 +1,20 @@
+// NEC Cloud System Style
+// ----
+
+.login .panel {
+  @include box-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
+}
+
+// Login
+#splash {
+    background-image:
+        url("#{$img_path}bg_login.jpg"),
+        url("#{$img_path}bg_body2.png");
+    background-repeat:
+        no-repeat,
+        repeat;
+    background-position:
+        center 10px,
+        0 0;
+    border: medium none;
+}

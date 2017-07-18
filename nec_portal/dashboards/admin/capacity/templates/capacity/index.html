@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "Resources" %}{% endblock %}
+
+{% block main %}
+<script type="text/javascript">
+function setLoader(id, url) {
+   showCapacity(id);
+   $('#' + id).attr({'src': url});
+}
+function showCapacity(id) {
+   $('iframe[id^=capacity_]').css('height', 1).css('weight', 1);
+   $('#' + id).css('height', '1000px').css('weight', '100%');
+}
+</script>
+
+<div class="row">
+  <div class="col-sm-12">
+    {{ tab_group.render }}
+    <iframe id="capacity_all"></iframe>
+    <iframe id="capacity_az" name="capacity_target"></iframe>
+    <iframe id="capacity_host" name="capacity_target"></iframe>
+  </div>
+</div>
+{% endblock %}

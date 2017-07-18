@@ -1,0 +1,14 @@
+{% load i18n sizeformat parse_date %}
+{% load url from future %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var id = 'capacity_all';
+  var tab_name = 'capacity_group_tabs__capacity_host';
+
+  setLoader(id, "{{ detail_url }}");
+  $('a[href$=' + tab_name + ']').parent().click(function() {
+    showCapacity(id);
+  });
+});
+</script>

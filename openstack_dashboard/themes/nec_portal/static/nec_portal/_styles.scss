@@ -1,0 +1,269 @@
+// NEC Cloud System Style
+// ----
+
+// Common
+#main_content {
+  width: 100%;
+  height: 100%;
+  display: table;
+  min-width: $main-content-min-width;
+  padding-top: 0px;
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: $font-weight-link;
+}
+a:visited {
+    text-decoration: none;
+    font-weight: $font-weight-link;
+}
+a:active {
+    text-decoration: none;
+    font-weight: $font-weight-link;
+}
+a:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+    font-weight: $font-weight-link;
+}
+a.list-mark:before {
+    content: url(#{$img_path}list-mark_menu.png) " ";
+}
+h1 {
+    font-size: $font-size-h1;
+    color: $font-color-h1;
+    font-weight: $font-weight-head;
+}
+h2 {
+    font-size: $font-size-h2;
+    color: $font-color-h2;
+    font-weight: $font-weight-head;
+}
+h3 {
+    font-size: $font-size-h3;
+    color: $font-color-h3;
+}
+h3.modal-title {
+    font-size: $font-size-modal-title;
+    color: $font-color-modal-title;
+    font-weight: $font-weight-modal-title;
+}
+input[type="text"], input[type="password"], textarea {
+    border: 1px solid $border-color-password;
+    border-radius: $border-radius-input;
+}
+img {
+    border: $border-style-img;
+}
+
+#content_body {
+    background-color: $bg-color-content;
+    min-width:800px;
+}
+.static_page {
+    border: initial;
+}
+
+#footer {
+    bottom: 0;
+    position: fixed;
+}
+
+// Header
+.page-header {
+    border: 0px;
+}
+
+#user_info {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+// Menu
+.nav_accordion dt h4:hover, .nav_accordion dd h4:hover {
+    border-color: $border-color-select-hover;
+}
+
+// Table
+table {
+    border-collapse: collapse;
+    margin: 10px 5px;
+}
+
+table th, table td {
+    padding: 0px 3px 0px 3px;
+}
+
+table th, .table-bordered tr.table_caption + tr th {
+    padding: 3px;
+    color: $table-text-color-thtd;
+    border-top: 3px solid $table-border-color-top;
+}
+
+table .cell_tenant {
+    width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr.no-after th {
+    font-weight: normal;
+}
+table .cell_roll {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table .cell_service {
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td.actions_column {
+    padding: 0 10px;
+}
+
+.table tbody>td {
+    padding: 0 8px;
+}
+
+// Form
+// history
+// + - button
+// network topology
+// dialog box delete button
+button.btn.btn-primary, input.btn.btn-primary, ul.nav.nav-pills.btn-group.btn-group-sm li.active a, div.launchButtons a.btn.btn-default.btn-sm, .modal-footer a.btn.btn-primary, div.table_search button.btn.btn-default.btn-sm, div.action a.btn.btn-default.btn-xs {
+    border: 1px solid $border-color-btn;
+    border-radius: $border-radius-btn;
+    background: url(#{$img_path}bg_btn_normal.png) left center repeat-x $bg-color-btn;
+    color: $font-color-btn;
+    font-weight: $font-weight-btn;
+    cursor: pointer;
+}
+
+button.btn.btn-primary:hover, input.btn.btn-primary:hover, ul.nav.nav-pills.btn-group.btn-group-sm li.active a:hover, div.launchButtons a.btn.btn-default.btn-sm:hover, .modal-footer a.btn.btn-primary:hover, div.table_search button.btn.btn-default.btn-sm:hover {
+    box-shadow: 0px 0px 0px 0px $shadow-color-btn, 0 0 1px 1px $shadow-color-btn-inset inset;
+    color: $font-color-btn;
+    background: url(#{$img_path}bg_btn_nor_hover.png) left center repeat-x $bg-color-btn;
+}
+
+button.btn[disabled], input.btn[disabled], ul.nav.nav-pills.btn-group.btn-group-sm li.active a[disabled], div.launchButtons a.btn.btn-default.btn-sm:disabled, .modal-footer a.btn.btn-primary:disabled, div.table_search button.btn.btn-default.btn-sm:disabled {
+    border: 0px solid $border-color-btn-disabled;
+    box-shadow: none;
+    color: $font-color-btn-disabled;
+    background: url(#{$img_path}bg_th.png) left top repeat-x $bg-color-btn-disabled;
+    cursor: default;
+}
+
+// dialog box delete button
+.modal-footer {
+    button.btn.btn-default.button-previous {
+        background: url(#{$img_path}bg_btn1.png) left center repeat-x $bg-color-btn-modal; !important;
+        margin-top: 0;
+        margin-right: 5px;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        color: $font-color-btn-else;
+        font-weight: $font-weight-btn;
+        filter: alpha(opacity=100);
+        -khtml-opacity: 1;
+        -moz-opacity: 1;
+        opacity: 1;
+    }
+
+    button.btn.btn-default.button-previous:hover, button.btn.btn-default.button-previous:focus {
+        @extend button.btn.btn-default.button-previous;
+        box-shadow: none;
+    }
+
+    button.btn.btn-default.button-previous.disabled {
+        @extend button.btn.btn-default.button-previous;
+        background: url(#{$img_path}bg_th.png) left top repeat-x $bg-color-btn-disabled; !important;
+        color: $font-color-btn-disabled;
+    }
+
+    a.close.cancel, a.btn.btn-default.cancel {
+        background: url("#{$img_path}bg_btn1.png") left center repeat-x $bg-color-btn-modal;
+        color: $font-color-btn-cancel !important;
+        text-decoration: none; !important;
+        font-weight: $font-weight-btn; !important;
+    }
+
+    a.close.cancel:hover, a.close.cancel:focus, a.btn.btn-default.cancel:hover {
+        background: url("#{$img_path}bg_btn1.png") left center repeat-x $bg-color-btn-modal;
+        color: $font-color-btn-cancel !important;
+        text-decoration: none; !important;
+        font-weight: $font-weight-btn; !important;
+    }
+
+}
+
+input[type="checkbox"] {
+    margin-right: 3px;
+    vertical-align: -2px;
+}
+
+input[type="radio"] {
+    margin-right: 3px;
+    vertical-align: -2px;
+}
+
+.table_actions .btn-danger {
+    background-color: $bg-color-btn-danger;
+    background-image: -moz-linear-gradient(top,$bg-color-btn-danger-img-light,$bg-color-btn-danger-img-dark);
+    background-image: -ms-linear-gradient(top,$bg-color-btn-danger-img-light,$bg-color-btn-danger-img-dark);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from($bg-color-btn-danger-img-light),to($bg-color-btn-danger-img-dark));
+    background-image: -webkit-linear-gradient(top,$bg-color-btn-danger-img-light,$bg-color-btn-danger-img-dark);
+    background-image: -o-linear-gradient(top,$bg-color-btn-danger-img-light,$bg-color-btn-danger-img-dark);
+    background-image: linear-gradient(top,$bg-color-btn-danger-img-light,$bg-color-btn-danger-img-dark);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$bg-color-btn-danger-img-light', endColorstr='$bg-color-btn-danger-img-dark', GradientType=0);
+    border-color: $border-color-btn-danger;
+    border-color: rgba(0,0,0,.1)rgba(0,0,0,.1)fadein(rgba(0,0,0,.1),15%);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.table_actions a {
+    border: 1px solid $border-color-btn;
+    background: url("#{$img_path}bg_btn_normal.png") repeat-x scroll left center $bg-color-btn;
+    color: $font-color-btn;
+}
+
+.table_actions a:hover {
+    border: 1px solid $border-color-btn;
+    background: url("#{$img_path}bg_btn_nor_hover.png") repeat-x scroll left center $bg-color-btn-hover;
+    color: $font-color-btn;
+}
+
+.btn-delete {
+    color: $font-color-btn;
+}
+
+.datepicker:before {
+    content: initial;
+}
+
+.datepicker:after {
+    content: initial;
+}
+
+.row-fluid > .span12 {
+    width: auto;
+}
+
+.span12 {
+    margin-bottom: 5px;
+}
+
+#right_content #page_head {
+    margin: 10px 10px 10px 20px;
+}
+
+// UI Part
+#content_body_iframe {
+    @extend #content_body;
+    margin: 10px 10px 10px 10px;
+}

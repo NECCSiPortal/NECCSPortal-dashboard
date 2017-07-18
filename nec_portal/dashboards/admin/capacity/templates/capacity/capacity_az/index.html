@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+{% block title %}{% trans "Availability zones" %}{% endblock %}
+
+{% block page_header %}
+  {% include "horizon/common/_page_header.html" with title=_("Availability zones") %}
+{% endblock page_header %}
+
+{% block main %}
+{% include "admin/capacity/capacity_az/_index.html" %}
+{% endblock %}
